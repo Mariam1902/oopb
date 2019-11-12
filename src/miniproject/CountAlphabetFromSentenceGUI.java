@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author User
  */
-public class CountAlphabetFromSentenceGUI extends javax.swing.JFrame {
+public class CountAlphabetFromSentenceGUI extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form CountAlphabetFromSentenceGUI
@@ -37,15 +37,15 @@ public class CountAlphabetFromSentenceGUI extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         txtSentence = new javax.swing.JTextArea();
         jPanel4 = new javax.swing.JPanel();
-        C1 = new javax.swing.JCheckBox();
-        B2 = new javax.swing.JCheckBox();
-        B3 = new javax.swing.JCheckBox();
+        Vowel = new javax.swing.JCheckBox();
+        Notvowel = new javax.swing.JCheckBox();
+        V3 = new javax.swing.JCheckBox();
         jPanel5 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        result = new javax.swing.JTextArea();
+        Result = new javax.swing.JTextArea();
         btnClear = new javax.swing.JButton();
-        btnCount = new javax.swing.JButton();
+        Count = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -99,30 +99,30 @@ public class CountAlphabetFromSentenceGUI extends javax.swing.JFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Count Options", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("TH SarabunPSK", 1, 24))); // NOI18N
         jPanel4.setToolTipText("");
 
-        C1.setBackground(new java.awt.Color(255, 102, 102));
-        C1.setFont(new java.awt.Font("TH SarabunPSK", 0, 18)); // NOI18N
-        C1.setText("Vowel (สระ)");
-        C1.addActionListener(new java.awt.event.ActionListener() {
+        Vowel.setBackground(new java.awt.Color(255, 102, 102));
+        Vowel.setFont(new java.awt.Font("TH SarabunPSK", 0, 18)); // NOI18N
+        Vowel.setText("Vowel (สระ)");
+        Vowel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                C1ActionPerformed(evt);
+                VowelActionPerformed(evt);
             }
         });
 
-        B2.setBackground(new java.awt.Color(255, 102, 102));
-        B2.setFont(new java.awt.Font("TH SarabunPSK", 0, 18)); // NOI18N
-        B2.setText("Not vowel (ไม่ใช่สระ)");
-        B2.addActionListener(new java.awt.event.ActionListener() {
+        Notvowel.setBackground(new java.awt.Color(255, 102, 102));
+        Notvowel.setFont(new java.awt.Font("TH SarabunPSK", 0, 18)); // NOI18N
+        Notvowel.setText("Not vowel (ไม่ใช่สระ)");
+        Notvowel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B2ActionPerformed(evt);
+                NotvowelActionPerformed(evt);
             }
         });
 
-        B3.setBackground(new java.awt.Color(255, 102, 102));
-        B3.setFont(new java.awt.Font("TH SarabunPSK", 0, 18)); // NOI18N
-        B3.setText("Vowel & Not Vowel & Count each vowel");
-        B3.addActionListener(new java.awt.event.ActionListener() {
+        V3.setBackground(new java.awt.Color(255, 102, 102));
+        V3.setFont(new java.awt.Font("TH SarabunPSK", 0, 18)); // NOI18N
+        V3.setText("Vowel & Not Vowel & Count each vowel");
+        V3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                B3ActionPerformed(evt);
+                V3ActionPerformed(evt);
             }
         });
 
@@ -133,11 +133,11 @@ public class CountAlphabetFromSentenceGUI extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(B3)
+                    .addComponent(V3)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(C1)
+                        .addComponent(Vowel)
                         .addGap(157, 157, 157)
-                        .addComponent(B2)))
+                        .addComponent(Notvowel)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -145,10 +145,10 @@ public class CountAlphabetFromSentenceGUI extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(C1)
-                    .addComponent(B2))
+                    .addComponent(Vowel)
+                    .addComponent(Notvowel))
                 .addGap(18, 18, 18)
-                .addComponent(B3)
+                .addComponent(V3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -158,9 +158,9 @@ public class CountAlphabetFromSentenceGUI extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("TH SarabunPSK", 1, 24)); // NOI18N
         jLabel2.setText("Result : ");
 
-        result.setColumns(20);
-        result.setRows(5);
-        jScrollPane1.setViewportView(result);
+        Result.setColumns(20);
+        Result.setRows(5);
+        jScrollPane1.setViewportView(Result);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -194,11 +194,11 @@ public class CountAlphabetFromSentenceGUI extends javax.swing.JFrame {
             }
         });
 
-        btnCount.setFont(new java.awt.Font("TH SarabunPSK", 1, 18)); // NOI18N
-        btnCount.setText("Count");
-        btnCount.addActionListener(new java.awt.event.ActionListener() {
+        Count.setFont(new java.awt.Font("TH SarabunPSK", 1, 18)); // NOI18N
+        Count.setText("Count");
+        Count.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCountActionPerformed(evt);
+                CountActionPerformed(evt);
             }
         });
 
@@ -224,7 +224,7 @@ public class CountAlphabetFromSentenceGUI extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnClear, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCount, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Count, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(12, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -237,7 +237,7 @@ public class CountAlphabetFromSentenceGUI extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(btnClear)
                         .addGap(18, 18, 18)
-                        .addComponent(btnCount)
+                        .addComponent(Count)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnExit))
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -271,101 +271,112 @@ public class CountAlphabetFromSentenceGUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnExitActionPerformed
 
-    private void btnCountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCountActionPerformed
+    private void CountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CountActionPerformed
         // TODO add your handling code here:
         String m = txtSentence.getText();
-        String y = "";
-        if (C1.isSelected()) {
-            y = y + cVowel(y);
+        String result = "";
+        if (Vowel.isSelected()) {
+            result = result + Vowel(m);
+
         }
+        if (Notvowel.isSelected()) {
+            result = result + Notvowel(m);
 
-        result.setText(y);
-    }//GEN-LAST:event_btnCountActionPerformed
+        }
+        if (V3.isSelected()) {
+            result = result + Vowel(m);
+            result = result + Notvowel(m);
+            result = result + V3(m);
+        }
+        Result.setText(" " + result);
+    }//GEN-LAST:event_CountActionPerformed
 
+    String Vowel(String sentence) {
+        int Vowel = 0;
+        String m = txtSentence.getText();
+        for (int i = 0; i < sentence.length(); i++) {
+            char c = sentence.charAt(i);
+            sentence = sentence.toLowerCase();
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                Vowel++;
+            }
+        }
+        return "\n Input : " + m + " \t vowel : " + Vowel;
 
+    }
+
+    String Notvowel(String sentence) {
+        int Vowel = 0;
+        int Notvowel = 0;
+        String m = txtSentence.getText();
+        for (int i = 0; i < sentence.length(); i++) {
+            char c = sentence.charAt(i);
+            sentence = sentence.toLowerCase();
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                Vowel++;
+
+            } else if (c != 'a' || c != 'e' || c != 'i' || c != 'o' || c != 'u') {
+                Notvowel++;
+
+            }
+        }
+        return "\n Input : " + m + "\t notvowel : " + Notvowel;
+    }
+
+    String V3(String sentence) {
+        int Vowel = 0;
+        int Notvowel = 0;
+        String m = txtSentence.getText();
+        for (int i = 0; i < sentence.length(); i++) {
+            char c = sentence.charAt(i);
+            sentence = sentence.toLowerCase();
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                Vowel++;
+
+            } else if (c != 'a' || c != 'e' || c != 'i' || c != 'o' || c != 'u') {
+                Notvowel++;
+
+            }
+        }
+        return "\n Input : " + m + "\t vowel&notvowel :  " + sentence.length();
+    }
+    
     private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
         // TODO add your handling code here:
-        result.setText("");
         txtSentence.setText("");
-        C1.setText("");
-        B2.setText("");
-        B3.setText("");
+        Result.setText("");
+        Vowel.setSelected(false);
+        Notvowel.setSelected(false);
+        V3.setSelected(false);
     }//GEN-LAST:event_btnClearActionPerformed
 
-    String cVowel(String sentence) {
-        int count = 0;
 
-        for (int i = 0; i < sentence.length(); i++) {
-            char a = sentence.charAt(i);
-            if (a == 'a'
-                    || // เช็คว่าตัวอักษรเป็น A หรือ a
-                    a == 'e'
-                    || // เช็คว่าตัวอักษรเป็น E หรือ e
-                    a == 'i'
-                    || // เช็คว่าตัวอักษรเป็น I หรือ i
-                    a == 'o'
-                    || // เช็คว่าตัวอักษรเป็น O หรือ o 
-                    a == 'u') ;// เช็คว่าตัวอักษรเป็น U หรือ u
-            {
-                count++; // ทำการนับเมื่อเป็น A E I O U 
-            }
+    private void V3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_V3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_V3ActionPerformed
+
+    private void NotvowelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NotvowelActionPerformed
+        // TODO add your handling code here:
+        if (Count.isSelected()) {
+            Notvowel.setSelected(false);
         }
-        return " นับสระ " + count;
-    }
+    }//GEN-LAST:event_NotvowelActionPerformed
 
-    private void B3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B3ActionPerformed
+    private void VowelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VowelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_B3ActionPerformed
-
-    private void B2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_B2ActionPerformed
-
-    private void C1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_C1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_C1ActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CountAlphabetFromSentenceGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CountAlphabetFromSentenceGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CountAlphabetFromSentenceGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CountAlphabetFromSentenceGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        if (Count.isSelected()) {
+            Vowel.setSelected(false);
         }
-        //</editor-fold>
+    }//GEN-LAST:event_VowelActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CountAlphabetFromSentenceGUI().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox B2;
-    private javax.swing.JCheckBox B3;
-    private javax.swing.JCheckBox C1;
+    private javax.swing.JButton Count;
+    private javax.swing.JCheckBox Notvowel;
+    private javax.swing.JTextArea Result;
+    private javax.swing.JCheckBox V3;
+    private javax.swing.JCheckBox Vowel;
     private javax.swing.JButton btnClear;
-    private javax.swing.JButton btnCount;
     private javax.swing.JButton btnExit;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
@@ -377,7 +388,6 @@ public class CountAlphabetFromSentenceGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea result;
     private javax.swing.JTextArea txtSentence;
     // End of variables declaration//GEN-END:variables
 }
